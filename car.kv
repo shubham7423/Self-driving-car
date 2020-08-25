@@ -1,0 +1,116 @@
+#:kivy 1.0.9
+# ref: https://kivy.org/docs/tutorials/pong.html
+
+<Car_1>:
+    size: 20, 10
+    canvas:
+        PushMatrix
+        Rotate:
+            angle: self.angle
+            origin: self.center
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        PopMatrix
+
+<Ball1_1>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 1,0,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+<Ball2_1>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 0,1,1,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Ball3_1>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 1,1,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+            
+<Car_2>:
+    size: 20, 10
+    canvas:
+        PushMatrix
+        Rotate:
+            angle: self.angle
+            origin: self.center
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        PopMatrix
+
+<Ball1_2>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 1,0,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+<Ball2_2>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 0,1,1,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Ball3_2>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 1,1,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+    
+
+<Game>:
+    car_1: game_car_1
+    ball1_1: game_ball1_1
+    ball2_1: game_ball2_1
+    ball3_1: game_ball3_1
+    
+    car_2: game_car_2
+    ball1_2: game_ball1_2
+    ball2_2: game_ball2_2
+    ball3_2: game_ball3_2
+
+    Car_1:
+        id: game_car_1
+        center: self.parent.center
+    Ball1_1:
+        id: game_ball1_1
+        center: self.parent.center
+    Ball2_1:
+        id: game_ball2_1
+        center: self.parent.center
+    Ball3_1:
+        id: game_ball3_1
+        center: self.parent.center
+        
+    Car_2:
+        id: game_car_2
+        center: self.parent.center
+    Ball1_2:
+        id: game_ball1_2
+        center: self.parent.center
+    Ball2_2:
+        id: game_ball2_2
+        center: self.parent.center
+    Ball3_2:
+        id: game_ball3_2
+        center: self.parent.center
